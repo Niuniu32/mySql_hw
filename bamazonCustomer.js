@@ -59,19 +59,19 @@ function order() {
                             product_name: answer.productName
                         }
                     ], function (err) {
-                        if (error) throw err;
+                        //if (error) throw err;
                     }
                     );
                     console.log("Total Price:");
                     console.log(parseInt(res[0].price) * parseInt(answer.quantity));
                     console.log("Order completed");
-                    
-
-                }
+                    main()
+                    }
                 else {
                     console.log("Insufficient quantity!");
-
+                    main()
                 }
             })
         })
+        
 }
